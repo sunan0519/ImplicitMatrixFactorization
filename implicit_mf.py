@@ -45,7 +45,7 @@ class ImplicitMF():
                 counts_i = self.counts[i].toarray()
             else:
                 counts_i = self.counts[:, i].T.toarray()
-            CuI = sp.diags(1 + self.alpha * counts_i, [0])
+            CuI = sp.diags(1 + self.alpha * np.log(1 + counts_i), [0])
             pu = counts_i.copy()
             pu[np.where(pu != 0)] = 1.0
             YTCuIY = fixed_vecs.T.dot(CuI).dot(fixed_vecs)

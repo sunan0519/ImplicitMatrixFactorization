@@ -73,9 +73,9 @@ test = sp.csr_matrix(test_array)
 # 'num_factors': 40,
 # 'regularization': 0.01}
 
-num_factors = [20, 40, 80]
+num_factors = [20, 40, 60]
 regularizations = [0.01, 0.1, 1]
-alpha = [0.1, 1, 10, 40]
+alpha = [0.1, 1, 10, 20]
 
 best_params = {}
 best_params['alpha'] = alpha[0]
