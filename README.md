@@ -17,3 +17,6 @@ transforms raw data to a user-song sparse matrix and takes a subset given thresh
 The Implicit Matrix Factorization method is given in: `implicit_mf.py`
 
 Parameter tuning is finished in :`main.py`
+
+## Update
+The model performance is optimized now in `MF-final_version`. Cython, Conjugate Gradient method(instead of ALS) and Python performance tips like reducing function call overhead are used. It is at least 5 times faster than original version. (27 seconds to finish one iteration now and 180s originally).
